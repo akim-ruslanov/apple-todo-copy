@@ -1,0 +1,140 @@
+body {
+    padding: 0;
+    margin: 0;
+	font-family: SF Pro Display,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+    color: rgb(221,221,221);
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    width: 100vw;
+    height: 100vh;
+}
+
+#sidebar {
+    background-color: rgba(40, 40, 38, 0.9);
+}
+
+#main {
+    background-color: rgb(32,32,29);
+    padding-top: 5vh;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.main-list-title {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 32px;
+}
+
+.items-list {
+    display: grid;
+    grid-template-rows: auto;
+}
+
+.item-list {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.checkbox-container {
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.checkbox-container label {
+    background-color: inherit;
+    border: 1px solid rgb(98, 97, 94);
+    border-radius: 50%;
+    cursor: pointer;
+    height: 1em;
+    width: 1em;
+}
+
+.checkbox-container label:after {
+    border: 2px solid #fff;
+    border: none;
+    content: "";
+    height: 6px;
+    opacity: 0;
+    width: 12px;
+}
+
+.checkbox-container input[type="checkbox"] {
+    display: none;
+}
+  
+.checkbox-container input[type="checkbox"]:checked + label {
+    background-color: rgb(59, 130, 247);
+    border-color: rgb(59, 130, 247);
+    border-width: 1px;
+    box-shadow: inset 0px 0px 0px 1px rgb(32,32,29);
+}
+
+.checkbox-container input[type="checkbox"]:checked + label:after {
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+#sidebar {
+    display: grid;
+    grid-template-rows: 1fr 3fr 3fr;
+}
+
+.lists-container>:first-child {
+    color: rgb(98, 97, 94);
+    font-size: 12px;
+    padding-left: 15px;
+}
+
+.lists {
+    display: grid;
+    grid-auto-rows: 50px;
+}
+
+.list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.list-title-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.list-svg-container {
+    background-color: rgb(59, 130, 247);
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.list-title-container svg {
+    width: 0.8em;
+    height: 0.8em;
+    color: white;
+}
+
+.list-length {
+    display: flex;
+    align-items: center;
+}
