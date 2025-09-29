@@ -7,7 +7,7 @@ body {
 
 .content {
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 281px auto;
     width: 100vw;
     height: 100vh;
 }
@@ -96,10 +96,15 @@ body {
     grid-template-rows: 1fr 3fr 3fr;
 }
 
+.lists-container {
+    padding: 15px;
+}
+
 .lists-container>:first-child {
     color: rgb(98, 97, 94);
     font-size: 12px;
     padding-left: 15px;
+    font-weight: 500;
 }
 
 .lists {
@@ -112,13 +117,17 @@ body {
     justify-content: space-between;
 }
 
+.list>:last-child {
+    color: rgb(98, 97, 94);
+}
+
 .list-title-container {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.list-svg-container {
+.list-svg-container, .card-svg-container {
     background-color: rgb(59, 130, 247);
     width: 1.5em;
     height: 1.5em;
@@ -131,6 +140,9 @@ body {
 .list-title-container svg {
     width: 0.8em;
     height: 0.8em;
+}
+
+.list-title-container svg, .card-svg-container svg {
     color: white;
 }
 
@@ -138,3 +150,71 @@ body {
     display: flex;
     align-items: center;
 }
+
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 70px;
+    gap: 5px;
+    justify-items: center;
+}
+
+.card {
+    background-color: rgb(78, 77, 74);
+    border-radius: 10px 10px 10px 10px;
+    width: 115px;
+    padding: 8px;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+
+.card-svg-container {
+    width: 25px;
+    height: 25px;
+}
+
+.card-svg-container svg {
+    width: 15px;
+    height: 15px;
+}
+
+.icon-name-container {
+    display: grid;
+    gap: 5px;
+}
+
+.card-count-container {
+    text-align: end;
+}
+
+
+.search-bar {
+    display: grid;
+    grid-template: 30px / 250px;
+    justify-content: center;
+    align-content: center;
+    justify-items: stretch;
+    align-items: stretch;
+}
+
+.search-icon-container {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    overflow: visible;
+}
+
+.search-bar input {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    background: none;
+    padding-left: 30px;
+
+}
+
+
+
+.search-icon-container svg {
+    width: 15px;
+}
+
